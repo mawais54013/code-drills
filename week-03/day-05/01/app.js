@@ -21,9 +21,12 @@ $(document).ready(function() {
 
       /* 
       1. 
-				Create a function call `getHeroes`. Put the closing bracket just before this function is invoked (towards the bottom of this file). 
-				
+				Create a function call `getHeroes`. Put the closing bracket just before this function is invoked (towards the bottom of this file). 	
 			*/
+		function getHeroes()
+		{
+
+		
 
       /* 
       2. Create 3 variable for our query:
@@ -178,6 +181,7 @@ $(document).ready(function() {
 			  	outside the loops 
 			  	append `row` to `#content` 
 			  */
+		}
 getHeroes()
         /* 
         12.
