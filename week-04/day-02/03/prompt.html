@@ -13,7 +13,26 @@
     function compressor(str) {
     // ====================== YOUR WORK HERE ===================
 
-
+        var arr = str.split("");
+        console.log(arr);
+        var num = 0;
+        for(var i = 0; i<str.length; i++)
+        {
+          for(var j = 0; j<str.length; j++)
+          {
+            if(arr[i] == arr[j])
+            {
+             num++;
+              console.log(arr[i]);
+              // console.log(true);
+            }
+            // else 
+            // {
+            //   console.log(false);
+            // }
+          }
+        }
+        console.log(num);
 
 
 
