@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    var roman = "MMMDCCLXXXII"
+    var roman2 = "IX"
+    var roman3 = "CMXLIV"
+
+    function convertRoman(str) {
+    
+    // ====================== YOUR WORK HERE ======================
+      var arr = str.split();
+      var total = 0;
+      var num = 0;
+      
+      for(var i = 0; i<str.length; i++)
+      {
+        if(str[i] === "M")
+        {
+          num = 1000;
+          total = total + num;
+        }
+        if(str[i] === "D")
+        {
+          num = 500;
+          total = total + num;
+        }
+        if(str[i] === "C")
+        {
+          num = 100;
+          total = total + num;
+        }
+        if(str[i] === "L")
+        {
+          num = 50;
+          total = total + num;
+        }
+        if(str[i] === "I")
+        {
+          num = 1;
+          total = total + num;
+        }
+        if(str[i] === "V")
+        {
+          num = 5;
+          total = total + num;
+        }
+        if(str[i] === "X")
+        {
+          num = 10;
+          total = total + num;
+        }
+        
+      }
+      return total;
+
+    // ============================================================
+    
+    
+    }
+
+    
+
+
+console.log(convertRoman(roman))
+console.log(convertRoman(roman2))
+console.log(convertRoman(roman3))
+
+  </script>
+</body>
+</html>
