@@ -7,10 +7,11 @@
 // display the string in the display-area when clicked later.
 function createButton(str) {
   // ---------- Your Code Here ----------
-
-
-
-
+    console.log(str)
+    var button = document.createElement("button");
+    button.type = "button";
+    button.value = str;
+    displayContent(button);
 
 
   // ---------- End of Code area ----------
@@ -27,7 +28,7 @@ function createButton(str) {
 function displayContent(event) {
   // ---------- Your Code Here ----------
 
-
+   $("#button-area").append(event)
 
 
 
@@ -41,11 +42,6 @@ function displayContent(event) {
 // Put your click listeners here.
 $(function () {
   // ---------- Your Code Here ----------
-
-
-
-
-
-
+  
   // ---------- End of Code area ----------
 })

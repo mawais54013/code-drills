@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+  <script>
+  var sent1 = "Sasha is very nice";
+  var sent2 = "Robert is very kind";
+  
+  function uncommon(s1, s2) {
+// ===================== YOUR WORK HERE =====================
+    var str1 = s1.split(" ");
+    var str2 = s2.split(" ");
+
+    var store = [];
+  var store1 = [];
+    for(var i = 0; i<str1.length; i++)
+    {
+      for(var j = 0; j<str2.length; j++)
+      {
+        if(str1[i] === str2[j])
+        {
+          store.push(str1[i]);
+          store.push(str2[j]);
+          store1.push(str1[i]);
+        }
+      }
+    }
+    console.log(store1);
+
+
+
+// ==========================================================
+  }
+
+// Should return: ["Sasha", "nice", "Robert", "kind"]
+  console.log(uncommon(sent1, sent2))
+  
+  </script>
+</body>
+</html>
