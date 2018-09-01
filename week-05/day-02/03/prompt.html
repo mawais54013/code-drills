@@ -16,25 +16,21 @@
   
   function uncommon(s1, s2) {
 // ===================== YOUR WORK HERE =====================
-    var str1 = s1.split(" ");
-    var str2 = s2.split(" ");
-
-    var store = [];
-  var store1 = [];
-    for(var i = 0; i<str1.length; i++)
+{
+    var i = 0;
+    var j = 0;
+    var result = "";
+    
+    while (j < s2.length)
     {
-      for(var j = 0; j<str2.length; j++)
-      {
-        if(str1[i] === str2[j])
-        {
-          store.push(str1[i]);
-          store.push(str2[j]);
-          store1.push(str1[i]);
-        }
-      }
+        if (s1[i] != s2[j] || i == s1.length)
+            result += s2[j];
+        else
+            i++;
+        j++;
     }
-    console.log(store1);
-
+    return result;
+}
 
 
 // ==========================================================

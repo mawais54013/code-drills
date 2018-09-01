@@ -9,11 +9,19 @@
 // -------------------------------------------------------
 function fibonacci(num) {
   // -------------------- Your Code Here --------------------
+var arr = [];
+  var a = 0, b = 1, f = 1;
+  arr.push(a);
+  arr.push(b);
+  for(var i = 3; i <= num; i++) {
+      f = a + b;
+      a = b;
+      b = f;
+      arr.push(f);
+  }
+return arr;
 
-
-
-
-
+ 
 
   // --------------------- End Code Area --------------------
 }

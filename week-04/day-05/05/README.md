@@ -11,3 +11,5 @@ should return
 * You will not have to change anything outside of the coding area provided to you inside the Javascript file.
 
 * The webpage will call the countCons function upon submit with the input given and display the return to the webpage
+
+21 consonant letters in the English alphabet are B, C, D, F, G, H, J, K, L, M, N, P, Q, R, S, T, V, X, Z, and usually W and Y.

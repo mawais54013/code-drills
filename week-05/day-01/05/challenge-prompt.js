@@ -12,9 +12,25 @@
 // ----------------------------------------------------------
 function checkTriange(arr) {
   // -------------------- Your Code Here --------------------
-
-
-
+    // console.log(arr);
+    var x = "Equilateral Triangle";
+    var y = "Isoceles Triangle";
+    var z = "Scalene Triangle";
+    var array = [];
+    if((arr[0] === arr[1]) && (arr[1] === arr[2]) && (arr[0] === arr[2]))
+    {
+      array.push(x);
+      array.push(y);
+    }
+    else if(((arr[0] === arr[1]) || (arr[1] === arr[2])))
+    { 
+      array.push(y);
+    }
+    else 
+    {
+      array.push(z);
+    }
+    return array;
 
 
 

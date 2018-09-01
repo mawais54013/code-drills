@@ -15,8 +15,49 @@
 
     function backToSquareOne(moves) {
 // ===================== YOUR WORK HERE =====================
-
-
+    var arr = [];
+    var arr1 = [];
+    var w = 0;
+    var z = 0;
+    arr1.push(w);
+    arr1.push(z);
+    var x = 0;
+    var y = 0;
+    arr.push(x);
+    arr.push(y);
+  // console.log(arr);
+  for(var i = 0; i<moves.length; i++)
+  {
+    if(moves[i] === "U")
+    {
+      x++;
+      arr.splice(0,1,x);
+    }
+    if(moves[i] === "D")
+    {
+      x--;
+      arr.splice(0,1,x);
+    }
+    if(moves[i] === "L")
+    {
+      y--;
+      arr.splice(1,1,y);
+    }
+    if(moves[i] === "R")
+    {
+      y++;
+      arr.splice(1,1,y);
+    }
+  }
+  if(arr = arr1)
+  {
+    return true;
+  } 
+  else
+  {
+    return false;
+  }
+// console.log(arr);
 
 
 // ==========================================================
