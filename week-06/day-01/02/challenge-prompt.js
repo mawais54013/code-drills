@@ -5,14 +5,27 @@
 // `birthday` takes in a number and adds that many years to the `age` property
 // and then console logs out a congratulatory message containing the name of
 // the human and their new age
-
-
-
-
+var Human = function(name)
+{
+  this.name = name;
+  var obj = {
+    name: name,
+    age: 0,
+    birthday : function(num)
+    {
+      age += num;
+      console.log(name);
+      console.log(age);
+    }
+  }
+}
 
 // Create a new Human object with a name of "Blake" and store it inside
 // the variable `blake`
-
+var blake = 
+{
+  name: "Blake",
+};
 
 
 
