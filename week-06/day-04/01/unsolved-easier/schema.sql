@@ -15,12 +15,30 @@ USE emmysDB;
 -- 6. Set nominee_id as the primary key
 
 CREATE TABLE nominees (
-
+    nominee_id INT NOT NULL AUTO_INCREMENT,
+    show_name VARCHAR(1000) NOT NULL,
+    num_seasons INT NULL,
+    genre VARCHAR(100) NOT NULL,
+    rating DECIMAL(10,2) NULL,
+    PRIMARY KEY(nominee_id)
 );
 
 
 -- Let the fun begin!! Seed your database with the 5 best TV shows of all time!  
-INSERT INTO nominees (show_name, num_seasons, genre, rating) VALUES 
+INSERT INTO nominees (show_name, num_seasons, genre, rating) 
+VALUES ("Transformers Prime", 3, "Kids", 8);
+
+INSERT INTO nominees (show_name, num_seasons, genre, rating) 
+VALUES ("Star Wars Rebels", 4, "Kids", 9);
+
+INSERT INTO nominees (show_name, num_seasons, genre, rating) 
+VALUES ("Star Wars The Clone Wars", 7, "Kids", 10);
+
+INSERT INTO nominees (show_name, num_seasons, genre, rating) 
+VALUES ("Dancing With The Stars", 25, "Show", 7);
+
+INSERT INTO nominees (show_name, num_seasons, genre, rating) 
+VALUES ("Stranger Things", 3, "Drama/Horror", 8);
 
 -- Paste all of this (feel free to remove the comments) into your work bench and run it. Verify that your table exists with all the shows you seeded into it
 -- Return back to the readme

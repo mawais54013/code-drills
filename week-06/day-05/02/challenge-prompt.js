@@ -7,6 +7,9 @@
 function mergeSorted(arr1, arr2) {
   // -------------------- Your Code Here --------------------
 
+  var arr = arr1.concat(arr2); 
+  arr.sort(function(a, b){return a - b})
+ return arr;
 
 
 

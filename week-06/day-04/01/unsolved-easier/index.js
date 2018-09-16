@@ -16,7 +16,7 @@ var connection = mysql.createConnection({
     user: "root",
 
     // Your password
-    password: "",
+    password: "password",
     database: "emmysDB"
 });
 
@@ -107,16 +107,16 @@ function add() {
 
 
         //4. complete the query string:
-        var queryString = "INSERT ????"
+        var queryString = "INSERT INTO nominees SET"
         connection.query(queryString, {
 
 
             //5. Input the appropriate info where the ?s are
-            show_name: //???,
-            num_seasons: //????,
-            genre: //?????,
+            show_name: answers.nomiName,//???,
+            num_seasons: answers.seasons,//????,
+            genre: answers.genre,//?????,
             //Don't forget... this needs to be a number that can have decimal places....
-            rating: //???????
+            rating: answers.rating//???????
 
 
         })
@@ -135,7 +135,7 @@ function populateNominees(crud){
 
 
     //7. Complete the query string. Remember, * means all
-    var queryString = "SELECT * ?????"
+    var queryString = "SELECT * FROM nominees"
     connection.query(queryString, function (err, res) {
        
     //8. LOOP through the names of the nominees, and PUSH them into our options array
@@ -165,20 +165,21 @@ function updateRating(list) {
 
 
         //9.  Complete the query string
-        var queryString = "UPDATE ????"
+        var queryString = "UPDATE nominees SET ? WHERE ?"
         connection.query(queryString,[{
 
 
             //10. Input the appropriate information
             //This is the new data we will SET
 
-            rating: //????? remeber, this needs to be a number capable of having decimal places
+            rating: answers.rating//????? remeber, this needs to be a number capable of having decimal places
         },{
             //This is the row WHERE we will update the data
-            show_name: //???????
+            show_name: list.nominee//???????
         }], 
         function(err, res) {
             console.log("Here is an updated list of the nominees:")
+           
             //Let's have a gander at our updated table (pulling straight from our database!!!!)
             review()   
         }
@@ -200,14 +201,14 @@ function remove(list) {
 
 
         //11. Complete the query string
-        var queryString = "DELETE ?????"
+        var queryString = "DELETE FROM nominees WHERE ?"
 
         connection.query(queryString,{
 
             
             //12. Input the appropriate information
             //This is the row WHERE we will execute our delete
-            show_name: //?????
+            show_name: answer.delete//?????
         })
         //Let's have a gander at our updated table (pulling straight from our database!!!!)
         review()
